@@ -55,9 +55,15 @@ steps:
     ArtifactName: 'build'
     publishLocation: 'Container'
 
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'build'
+    downloadPath: '$(Build.ArtifactStagingDirectory)'
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'azure_jhnjohnny'
     appType: 'webAppLinux'
     appName: 'aspnetcorespa30johnny'
-    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
