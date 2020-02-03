@@ -54,3 +54,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'build'
     publishLocation: 'Container'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'azure_jhnjohnny'
+    appType: 'webAppLinux'
+    appName: 'aspnetcorespa30johnny'
+    package: '$(System.ArtifactsDirectory)/**/*.zip'
+
