@@ -60,5 +60,4 @@ steps:
     azureSubscription: 'azure_jhnjohnny'
     appType: 'webAppLinux'
     appName: 'aspnetcorespa30johnny'
-    package: '$(System.ArtifactsDirectory)/**/*.zip'
-
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
