@@ -19,9 +19,9 @@ steps:
   displayName: Install Nuget
 
 - task: UseDotNet@2
-  displayName: Install 3.1.x
+  displayName: Install 3.0.x
   inputs:
-    version: '3.1.x'
+    version: '3.0.x'
 
 - task: NuGetCommand@2
   displayName: Restore
