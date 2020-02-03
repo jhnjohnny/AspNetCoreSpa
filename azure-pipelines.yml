@@ -62,9 +62,3 @@ steps:
     artifactName: 'build'
     downloadPath: '$(Build.ArtifactStagingDirectory)'
 
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'azure_jhnjohnny'
-    appType: 'webAppLinux'
-    appName: 'aspnetcorespa30johnny'
-    package: '$(Build.ArtifactStagingDirectory)/build/*.zip'
